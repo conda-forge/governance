@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sort-csv
+        name: Sort teams/*.csv
+        entry: scripts/sort_csv.py
+        language: python
+        types: [text]
+        files: teams/.*\.csv
+ci:
+  autofix_prs: false
